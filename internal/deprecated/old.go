@@ -1,7 +1,7 @@
 // Package deprecated is used to serve the old verion of the provider config
 package deprecated
 
-import "github.com/charmbracelet/catwalk/pkg/catwalk"
+import "github.com/elek/catwalk-open/pkg/catwalk"
 
 // Provider represents an AI provider configuration.
 type Provider struct {

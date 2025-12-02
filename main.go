@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/charmbracelet/catwalk/internal/deprecated"
-	"github.com/charmbracelet/catwalk/internal/providers"
+	"github.com/elek/catwalk-open/internal/deprecated"
+	"github.com/elek/catwalk-open/internal/providers"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

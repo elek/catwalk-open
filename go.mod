@@ -1,4 +1,4 @@
-module github.com/charmbracelet/catwalk
+module github.com/elek/catwalk-open
 
 go 1.24.3
 
