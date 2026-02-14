@@ -19,7 +19,7 @@ We’d love to hear your thoughts on this project. Need help? We gotchu. You can
 
 ## License
 
-[MIT](https://github.com/charmbracelet/catwalk/raw/main/LICENSE)
+[MIT](https://github.com/elek/catwalk-open/raw/main/LICENSE)
 
 ---
 

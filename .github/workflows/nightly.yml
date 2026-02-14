@@ -31,5 +31,5 @@ jobs:
           inputs: |
             {
               "app": "catwalk",
-              "image": "ghcr.io/charmbracelet/catwalk:${{ github.sha }}-devel"
+              "image": "ghcr.io/elek/catwalk-open:${{ github.sha }}-devel"
             }

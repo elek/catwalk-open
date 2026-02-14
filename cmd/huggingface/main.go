@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"github.com/elek/catwalk-open/pkg/catwalk"
 )
 
 // SupportedProviders defines which providers we want to support.
@@ -189,13 +189,13 @@ func main() {
 		return strings.Compare(a.Name, b.Name)
 	})
 
-	// Save the JSON in internal/providers/configs/huggingface.json
+	// Save the JSON in providers/configs/huggingface.json
 	data, err := json.MarshalIndent(hfProvider, "", "  ")
 	if err != nil {
 		log.Fatal("Error marshaling Hugging Face provider:", err)
 	}
 
-	if err := os.WriteFile("internal/providers/configs/huggingface.json", data, 0o600); err != nil {
+	if err := os.WriteFile("providers/configs/huggingface.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Hugging Face provider config:", err)
 	}
 

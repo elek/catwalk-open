@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"github.com/elek/catwalk-open/pkg/catwalk"
 	xstrings "github.com/charmbracelet/x/exp/strings"
 )
 
@@ -136,14 +136,14 @@ func main() {
 		return strings.Compare(a.Name, b.Name)
 	})
 
-	// Save the JSON in internal/providers/configs/ionet.json
+	// Save the JSON in providers/configs/ionet.json
 	data, err := json.MarshalIndent(provider, "", "  ")
 	if err != nil {
 		log.Fatal("Error marshaling io.net provider:", err)
 	}
 	data = append(data, '\n')
 
-	if err := os.WriteFile("internal/providers/configs/ionet.json", data, 0o600); err != nil {
+	if err := os.WriteFile("providers/configs/ionet.json", data, 0o600); err != nil {
 		log.Fatal("Error writing io.net provider config:", err)
 	}
 

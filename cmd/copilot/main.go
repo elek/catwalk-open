@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"github.com/elek/catwalk-open/pkg/catwalk"
 )
 
 type Response struct {
@@ -114,7 +114,7 @@ func run() error {
 		return fmt.Errorf("unable to marshal json: %w", err)
 	}
 	data = append(data, '\n')
-	if err := os.WriteFile("internal/providers/configs/copilot.json", data, 0o600); err != nil {
+	if err := os.WriteFile("providers/configs/copilot.json", data, 0o600); err != nil {
 		return fmt.Errorf("unable to write copilog.json: %w", err)
 	}
 	return nil

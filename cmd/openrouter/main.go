@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"github.com/elek/catwalk-open/pkg/catwalk"
 )
 
 // Model represents the complete model configuration.
@@ -391,13 +391,13 @@ func main() {
 		return strings.Compare(a.Name, b.Name)
 	})
 
-	// save the json in internal/providers/config/openrouter.json
+	// save the json in providers/config/openrouter.json
 	data, err := json.MarshalIndent(openRouterProvider, "", "  ")
 	if err != nil {
 		log.Fatal("Error marshaling OpenRouter provider:", err)
 	}
 	// write to file
-	if err := os.WriteFile("internal/providers/configs/openrouter.json", data, 0o600); err != nil {
+	if err := os.WriteFile("providers/configs/openrouter.json", data, 0o600); err != nil {
 		log.Fatal("Error writing OpenRouter provider config:", err)
 	}
 }

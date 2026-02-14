@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"github.com/elek/catwalk-open/pkg/catwalk"
 )
 
 // Model represents a model from the Synthetic API.
@@ -240,13 +240,13 @@ func main() {
 		return strings.Compare(a.Name, b.Name)
 	})
 
-	// Save the JSON in internal/providers/configs/synthetic.json
+	// Save the JSON in providers/configs/synthetic.json
 	data, err := json.MarshalIndent(syntheticProvider, "", "  ")
 	if err != nil {
 		log.Fatal("Error marshaling Synthetic provider:", err)
 	}
 
-	if err := os.WriteFile("internal/providers/configs/synthetic.json", data, 0o600); err != nil {
+	if err := os.WriteFile("providers/configs/synthetic.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Synthetic provider config:", err)
 	}
 

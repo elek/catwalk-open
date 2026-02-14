@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"charm.land/catwalk/pkg/catwalk"
+	"github.com/elek/catwalk-open/pkg/catwalk"
 )
 
 // Model represents a model from the Vercel API.
@@ -190,13 +190,13 @@ func main() {
 		return strings.Compare(a.Name, b.Name)
 	})
 
-	// Save the JSON in internal/providers/configs/vercel.json
+	// Save the JSON in providers/configs/vercel.json
 	data, err := json.MarshalIndent(vercelProvider, "", "  ")
 	if err != nil {
 		log.Fatal("Error marshaling Vercel provider:", err)
 	}
 
-	if err := os.WriteFile("internal/providers/configs/vercel.json", data, 0o600); err != nil {
+	if err := os.WriteFile("providers/configs/vercel.json", data, 0o600); err != nil {
 		log.Fatal("Error writing Vercel provider config:", err)
 	}
 

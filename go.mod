@@ -1,4 +1,4 @@
-module charm.land/catwalk
+module github.com/elek/catwalk-open
 
 go 1.25.5
 
