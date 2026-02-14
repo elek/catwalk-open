@@ -104,3 +104,7 @@ grep -r --include='*.go' --include='*.mod' --include='*.yml' --include='*.yaml' 
 
 echo ""
 echo "Done! You may want to run 'go mod tidy' to update go.sum."
+
+echo "Removing workflows"
+rm .github/workflows/nightly.yml
+rm .github/workflows/update.yml
